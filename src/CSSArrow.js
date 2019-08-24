@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
@@ -15,22 +14,22 @@ const Container = styled.div`
   align-items: center;
   margin: 1rem;
   hgroup {
-    text-align:center;
-    margin-top:1rem;
-    >h1{
-font-weight:bold;
-    font-size: 2rem;
-    margin-bottom:1rem;
-    text-transform:uppercase;
+    text-align: center;
+    margin-top: 1rem;
+    > h1 {
+      font-weight: bold;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
     }
-    >h2{
-      color:#ccc;
-    font-size: 1.2rem;
-    a {
-      color:#ddd;
-      margin: 0 0.4rem;
-      text-transform:uppercase;
-    }
+    > h2 {
+      color: #ccc;
+      font-size: 0.8rem;
+      a {
+        color: #ddd;
+        margin: 0 0.4rem;
+        text-transform: uppercase;
+      }
     }
   }
   .mainWrapper {
@@ -67,9 +66,8 @@ export default class CssArrowGenerator extends Component {
       borderWidth: 4,
       borderColor: '#c2e1f5',
       bgColor: '#88b7d5',
-      cssCode: '',
+      cssCode: ''
     };
-    // this.changeHandler = this.changeHandler.bind(this);
   }
   componentDidMount() {
     this.generateCode();
@@ -103,13 +101,13 @@ export default class CssArrowGenerator extends Component {
       position == 'top'
         ? 'bottom'
         : position == 'bottom'
-          ? 'top'
-          : position == 'left'
-            ? 'right'
-            : position == 'right'
-              ? 'left'
-              : ''
-      }`;
+        ? 'top'
+        : position == 'left'
+        ? 'right'
+        : position == 'right'
+        ? 'left'
+        : ''
+    }`;
 
     const beforeMarginKey = `${position == 'top' || position == 'bottom' ? 'left' : 'top'}`;
     const MarginVal = parseInt(size, 10) + Math.round(borderWidth * Math.sqrt(2));
@@ -144,14 +142,14 @@ export default class CssArrowGenerator extends Component {
     }
 `;
     this.setState({
-      cssCode: code,
+      cssCode: code
     });
   }
   changeHandler = (type, val) => {
     console.log(type, val);
     this.setState(
       {
-        [type]: val,
+        [type]: val
       },
       () => {
         this.generateCode();
@@ -164,7 +162,6 @@ export default class CssArrowGenerator extends Component {
       <>
         <Container>
           <hgroup>
-
             <h1>CSS arrow generator</h1>
             <h2>
               Inspired by
