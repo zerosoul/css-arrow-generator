@@ -1,17 +1,8 @@
 import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import styled from 'styled-components';
-const StyledBody = styled.section`
-  height: 60vh;
-`;
+import CssArrowGenerator from './CSSArrow';
 const App = () => {
   return (
-    <>
-      <Header />
-      <StyledBody>body</StyledBody>
-      <Footer />
-    </>
+    <CssArrowGenerator />
   );
 };
 export default App;

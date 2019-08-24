@@ -1,23 +1,22 @@
 {
-  "name": "react-starter",
+  "name": "css-arrow-generator",
   "version": "1.1.0",
-  "description": "React webapp starter",
+  "description": "css arrow generator online",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=development node scripts/start.js",
     "build": "NODE_ENV=production node scripts/build.js",
-    "deploy": "npm run build && gh-pages -d build",
     "changelog": "auto-changelog -p --release-summary -l false --template changelog.template.hbs && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zerosoul/react-starter.git"
+    "url": "git+https://github.com/zerosoul/css-arrow-generator.git"
   },
   "keywords": [
-    "css3",
-    "template",
-    "react",
+    "css",
+    "arrow",
+    "generator",
     "frontend",
     "tool",
     "amazing"
@@ -25,12 +24,16 @@
   "author": "tristan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zerosoul/react-starter/issues"
+    "url": "https://github.com/zerosoul/css-arrow-generator/issues"
   },
-  "homepage": "https://zerosoul.github.io/react-starter",
+  "homepage": "https://zerosoul.github.io/css-arrow-generator",
   "dependencies": {
     "react": "^16.9.0",
+    "react-color": "^2.17.3",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-syntax-highlighter": "^11.0.2",
     "styled-components": "^4.3.2",
     "styled-reset": "^3.0.2"
   },
@@ -53,7 +56,6 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
     "file-loader": "^4.2.0",
-    "gh-pages": "^2.1.1",
     "happypack": "^5.0.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^3.0.4",
