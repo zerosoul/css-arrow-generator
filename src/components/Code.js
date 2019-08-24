@@ -6,6 +6,7 @@ import CopyButton from './partial/CopyButton';
 
 const Container = styled.div`
   position: relative;
+  font-size:.8rem;
 `;
 
 export default class Code extends React.PureComponent {

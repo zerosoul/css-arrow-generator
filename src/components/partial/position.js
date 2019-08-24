@@ -4,17 +4,53 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  label {
-    cursor: pointer;
-    min-width: 6rem;
-    padding: 0.2rem 0;
+  .radio-wrapper{
+    margin: 0.3rem 0;
     input[type='radio'] {
-      padding: 0.2rem;
-      border-radius: 0.3rem;
-      margin-right: 0.4rem;
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+      opacity:0;
+       + label {
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: '';
+          position: absolute;
+          left: -22px; /* 这个后面会调整 */
+          border-radius: 50%;
+          border: 1px solid #6f686a;
+          width: 18px;
+          height: 18px;
+          background: transparent;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          left: -19px;
+          top: 7px;
+          border-radius: 50%;
+          width: 14px;
+          height: 14px;
+        }
+
+      }
+      &:checked {
+        + label::after {
+          background: #db3846;
+        }
+      }
+      &:focus {
+        + label::before {
+          box-shadow: 0 0px 8px #db3846;
+        }
+      }
+        &:disabled {
+        + label::before {
+          border:1px solid #ddd;
+          box-shadow: 0 0px 4px #ddd;
+        }
+      }
     }
-  }
+}
+
 `;
 
 export default class Position extends Component {
@@ -41,47 +77,32 @@ export default class Position extends Component {
   render() {
     return (
       <Container>
-        <div>Position</div>
-        <label htmlFor="top_rd">
+        <div className="radio-wrapper">
+          <input value="top" type="radio" id="top_rd" checked={this.state.checkedVal === 'top'}
+            onChange={this.handleChange} />
+          <label htmlFor="top_rd">Top</label>
+        </div>
+        <div className="radio-wrapper">
+          <input value="right" type="radio" id="right_rd" checked={this.state.checkedVal === 'right'}
+            onChange={this.handleChange} />
+          <label htmlFor="right_rd">Right</label>
+        </div>
+        <div className="radio-wrapper">
+          <input value="bottom" type="radio" id="bottom_rd" checked={this.state.checkedVal === 'bottom'}
+            onChange={this.handleChange} />
+          <label htmlFor="bottom_rd">Bottom</label>
+        </div>
+        <div className="radio-wrapper">
           <input
             type="radio"
-            id="top_rd"
-            value="top"
-            checked={this.state.checkedVal === 'top'}
-            onChange={this.handleChange}
-          />
-          Top
-        </label>
-        <label htmlFor="right_rd">
-          <input
-            type="radio"
-            id="right_rd"
-            value="right"
-            checked={this.state.checkedVal === 'right'}
-            onChange={this.handleChange}
-          />
-          Right
-        </label>
-        <label htmlFor="bottom_rd">
-          <input
-            type="radio"
-            id="bottom_rd"
-            value="bottom"
-            checked={this.state.checkedVal === 'bottom'}
-            onChange={this.handleChange}
-          />
-          Bottom
-        </label>
-        <label htmlFor="left_rd">
-          <input
-            type="radio"
-            id="left_rd"
             value="left"
+            id="left_rd"
             checked={this.state.checkedVal === 'left'}
-            onChange={this.handleChange}
-          />
-          Left
-        </label>
+            onChange={this.handleChange} />
+          <label htmlFor="left_rd">Left</label>
+        </div>
+
+
       </Container>
     );
   }

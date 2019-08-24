@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import ColorPicker from './ColorPicker';
 
 const Container = styled.div`
-  margin-top: 0.2rem;
+  margin-top: 0.6rem;
   display: flex;
   align-items: center;
   .title {
     flex: 1;
-    width: 7rem;
+    width: 7.6rem;
   }
 
   .input {
