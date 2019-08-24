@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body{
     -webkit-overflow-scrolling: touch;
-    background: url(/img/bg.png);
+    background: url(./img/bg.png);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
     color: #fff;
     overflow:scroll;
