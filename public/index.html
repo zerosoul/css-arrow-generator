@@ -8,7 +8,6 @@
     <meta name="referrer" content="never" />
     <meta name="description" content="technology logo memory game" />
 
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
@@ -73,7 +72,6 @@
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    <link rel="manifest" href="manifest.json" />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -107,17 +105,4 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
-  <script>
-    if ('serviceWorker' in navigator) {
-      console.log('Will the service worker register?');
-      navigator.serviceWorker
-        .register('sw.js')
-        .then(function(reg) {
-          console.log('Yes, it did.');
-        })
-        .catch(function(err) {
-          console.log("No it didn't. This happened:", err);
-        });
-    }
-  </script>
 </html>
