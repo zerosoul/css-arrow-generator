@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import Helmet from 'react-helmet';
+import React, { Component, lazy, Suspense } from 'react';
 import styled from 'styled-components';
+import Loading from './components/Loading';
+const Footer = lazy(() => import('./components/Footer'));
+const Dashboard = lazy(() => import('./components/Dashboard'));
+const Showup = lazy(() => import('./components/Showup'));
+const Code = lazy(() => import('./components/Code'));
 
-import Footer from './components/Footer';
-import Dashboard from './components/Dashboard';
-import Showup from './components/Showup';
-import Code from './components/Code';
 import { media } from './utils/media';
 
 const Container = styled.div`
@@ -159,7 +159,7 @@ export default class CssArrowGenerator extends Component {
   render() {
     const { cssCode, ...settings } = this.state;
     return (
-      <>
+      <Suspense fallback={<Loading />}>
         <Container>
           <hgroup>
             <h1>CSS arrow generator</h1>
@@ -168,7 +168,6 @@ export default class CssArrowGenerator extends Component {
               <a href="//www.cssarrowplease.com/">css arrow</a>(Rewrite with React!)
             </h2>
           </hgroup>
-          <Helmet title="css arrow generator " />
           <div className="mainWrapper">
             <div className="left">
               <Showup cssArrowCode={cssCode} />
@@ -180,7 +179,7 @@ export default class CssArrowGenerator extends Component {
           </div>
         </Container>
         <Footer />
-      </>
+      </Suspense>
     );
   }
 }
