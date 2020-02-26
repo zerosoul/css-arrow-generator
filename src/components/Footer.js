@@ -32,7 +32,11 @@ const Footer = () => (
     <span>
       By <a href="//blog.yangerxiao.com">Tristan Yang</a> © 2018
     </span>
-
+    <span>
+      <a rel="noopener noreferrer" target="_blank" href="http://www.beian.miit.gov.cn/">
+        京ICP备16015459号-1
+      </a>
+    </span>
     <span>
       Checkout the source on <a href="//github.com/zerosoul/css-arrow-generator">Github</a>
     </span>

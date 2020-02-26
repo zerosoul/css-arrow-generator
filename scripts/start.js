@@ -39,7 +39,7 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 }
 
 // Tools like Cloud9 rely on this.
-const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 8081;
+const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 8076;
 const HOST = process.env.HOST || '0.0.0.0';
 // 检查已安装的包和package.json中是否一致
 installedCheck({ versionCheck: true }).then(result => {
@@ -99,8 +99,8 @@ choosePort(HOST, DEFAULT_PORT)
       openBrowser(urls.localUrlForBrowser);
     });
 
-    ['SIGINT', 'SIGTERM'].forEach(function (sig) {
-      process.on(sig, function () {
+    ['SIGINT', 'SIGTERM'].forEach(function(sig) {
+      process.on(sig, function() {
         devServer.close();
         process.exit();
       });
