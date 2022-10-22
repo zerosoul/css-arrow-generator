@@ -9,13 +9,14 @@ const Code = lazy(() => import('./components/Code'));
 import { media } from './utils/media';
 
 const Container = styled.div`
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
   hgroup {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
     > h1 {
       font-weight: bold;
       font-size: 2rem;
@@ -35,6 +36,7 @@ const Container = styled.div`
   .mainWrapper {
     display: flex;
     flex-direction: column;
+    margin-top: 4rem;
     padding: 1rem 0;
     @media ${media.desktop} {
       flex-direction: row;
@@ -59,14 +61,13 @@ const Container = styled.div`
 export default class CssArrowGenerator extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       position: 'top',
       size: 20,
       borderWidth: 4,
       borderColor: '#c2e1f5',
       bgColor: '#88b7d5',
-      cssCode: ''
+      cssCode: '',
     };
   }
   componentDidMount() {
@@ -142,14 +143,14 @@ export default class CssArrowGenerator extends Component {
     }
 `;
     this.setState({
-      cssCode: code
+      cssCode: code,
     });
   }
   changeHandler = (type, val) => {
     console.log(type, val);
     this.setState(
       {
-        [type]: val
+        [type]: val,
       },
       () => {
         this.generateCode();

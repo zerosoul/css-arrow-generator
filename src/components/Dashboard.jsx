@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Position from './partial/position';
-import Input from './partial/input';
+import Position from './partial/Position';
+import Input from './partial/Input';
 
 const Container = styled.div`
   display: flex;
@@ -36,7 +36,12 @@ export default class Dashboard extends React.PureComponent {
           <Position position={position} changeHandler={this.props.changeHandler} />
           <div className="inputs">
             <Input title="Size" type="size" value={size} changeHandler={this.props.changeHandler} />
-            <Input title="Color" type="bgColor" color={bgColor} changeHandler={this.props.changeHandler} />
+            <Input
+              title="Color"
+              type="bgColor"
+              color={bgColor}
+              changeHandler={this.props.changeHandler}
+            />
             <Input
               title="Border width"
               type="borderWidth"

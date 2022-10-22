@@ -36,7 +36,7 @@ export default class CopyButton extends Component {
     return (
       <>
         <CopyToClipboard text={this.props.cssCode} onCopy={() => this.setState({ copied: true })}>
-          <Button style={{ position: 'absolute', top: '1rem', right: '1rem' }}>COPY</Button>
+          <Button style={{ position: 'absolute', top: '1rem', right: '0' }}>COPY</Button>
         </CopyToClipboard>
         {this.state.copied && this.copyHandler()}
         {this.state.copied && <Tip>Copied!</Tip>}
