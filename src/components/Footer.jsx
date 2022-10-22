@@ -13,6 +13,7 @@ const Container = styled.footer`
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 5px;
   @media ${media.desktop} {
     flex-direction: row;
     justify-content: center;

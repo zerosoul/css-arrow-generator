@@ -9,7 +9,7 @@ const Code = lazy(() => import('./components/Code'));
 import { media } from './utils/media';
 
 const Container = styled.div`
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
