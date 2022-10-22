@@ -36,7 +36,6 @@
     "react-color": "^2.19.3",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-syntax-highlighter": "^15.5.0",
     "styled-components": "^5.3.6",
     "styled-reset": "^4.4.2"
