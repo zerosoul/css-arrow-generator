@@ -30,18 +30,18 @@
   "bugs": {
     "url": "https://github.com/zerosoul/css-arrow-generator/issues"
   },
-  "homepage": "https://works.yangerxiao.com/css-arrow-generator/",
+  "homepage": "https://css-arrow-gen.yangerxiao.com/",
   "dependencies": {
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-color": "^2.19.3",
     "react-copy-to-clipboard": "^5.1.0",
-    "react-dom": "^18.2.0",
-    "react-syntax-highlighter": "^15.5.0",
-    "styled-components": "^5.3.6",
-    "styled-reset": "^4.4.2"
+    "react-dom": "^18.3.1",
+    "react-syntax-highlighter": "^15.6.1",
+    "styled-components": "^6.1.13",
+    "styled-reset": "^4.5.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^2.1.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.10",
@@ -49,6 +49,6 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
-    "vite": "^3.1.8"
+    "vite": "^6.0.2"
   }
 }
